@@ -180,6 +180,8 @@ Failed password for root from 192.168.56.129
 
 Esse comportamento é característico de ataques de força bruta.
 
+<img width="816" height="800" alt="image" src="https://github.com/user-attachments/assets/cfe929b1-7334-4369-a916-e8013d21cb9e" />
+
 ### 5️⃣ Simulação de ataque DoS (SYN Flood)
 
 Para simular um ataque de negação de serviço, foi utilizado o Hping3.
