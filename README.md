@@ -180,8 +180,6 @@ Failed password for root from 192.168.56.129
 
 Esse comportamento é característico de ataques de força bruta.
 
-<img width="1414" height="873" alt="image" src="https://github.com/user-attachments/assets/e898fa1b-c72a-4709-aa56-5ffcc95f5245" />
-
 ### 5️⃣ Simulação de ataque DoS (SYN Flood)
 
 Para simular um ataque de negação de serviço, foi utilizado o Hping3.
@@ -189,6 +187,8 @@ Para simular um ataque de negação de serviço, foi utilizado o Hping3.
 sudo hping3 -S -p 80 --flood 192.168.56.128
 ```
 Esse comando envia um grande volume de pacotes TCP SYN para o servidor.
+
+<img width="631" height="159" alt="image" src="https://github.com/user-attachments/assets/cb133023-8cde-4c80-8bda-3b257ceb962f" />
 
 Consequências observadas:
 
@@ -201,6 +201,8 @@ saturação do armazenamento de logs
 Erro registrado pelo Suricata:
 
 No space left on device
+
+<img width="1284" height="819" alt="image" src="https://github.com/user-attachments/assets/ebca040b-7765-4ad0-a748-4b33f2d341ed" />
 
 Isso ocorreu porque o ataque gerou um volume extremamente alto de eventos no arquivo:
 ```
@@ -229,10 +231,12 @@ Esse alerta indica que o IDS detectou a presença de um host identificado como K
 Após identificar o IP atacante, foi simulada uma resposta defensiva utilizando firewall.
 
 Regra aplicada:
-
+```
 sudo iptables -A INPUT -s 192.168.56.129 -j DROP
-
+```
 Essa regra bloqueia todo o tráfego proveniente do atacante.
+
+<img width="1155" height="82" alt="image" src="https://github.com/user-attachments/assets/f6c8746b-399d-4c4c-a197-b57f1a790e7b" />
 
 Fluxo de resposta:
 ```
