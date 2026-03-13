@@ -21,6 +21,8 @@ Sistema Atacante
 
 Sistema operacional: Kali Linux
 
+IP: 192.168.56.129
+
 Ferramentas utilizadas:
 
 Nmap
@@ -34,6 +36,8 @@ Hping3
 Sistema Alvo / Monitoramento
 
 Sistema operacional: Ubuntu Server
+
+IP: 192.168.56.128
 
 IDS: Suricata
 
