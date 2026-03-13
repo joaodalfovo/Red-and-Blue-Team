@@ -269,18 +269,6 @@ mitigação do ataque utilizando firewall
 
 Esse cenário simula de forma realista o funcionamento de um ambiente de monitoramento de segurança de rede.
 
-## 📷 Evidências
-
-Sugestão de estrutura para screenshots no repositório:
-
-screenshots/
-├── nmap_scan.png
-├── vulnerability_scan.png
-├── gobuster_scan.png
-├── hydra_bruteforce.png
-├── syn_flood_attack.png
-├── suricata_alerts.png
-
 # 📚 Conclusão
 
 Este laboratório demonstra na prática como diferentes fases de um ataque podem ser detectadas por um sistema de detecção de intrusão em rede.
