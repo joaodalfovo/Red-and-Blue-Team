@@ -203,19 +203,24 @@ Erro registrado pelo Suricata:
 No space left on device
 
 Isso ocorreu porque o ataque gerou um volume extremamente alto de eventos no arquivo:
-
+```
 /var/log/suricata/eve.json
-🛡 Detecção de Atividades pelo Suricata
+```
+
+## 🛡 Detecção de Atividades pelo Suricata
 
 Durante os ataques, o Suricata gerou múltiplos alertas.
 
 Exemplo de alerta:
-
+```
 ET SCAN Possible Nmap User-Agent Observed
-
+```
 Outro alerta observado:
-
+```
 Possible Kali Linux hostname in DHCP Request Packet
+```
+
+<img width="1313" height="48" alt="image" src="https://github.com/user-attachments/assets/4be934db-8311-43ad-aa07-5db14bd009af" />
 
 Esse alerta indica que o IDS detectou a presença de um host identificado como Kali Linux na rede.
 
@@ -230,7 +235,7 @@ sudo iptables -A INPUT -s 192.168.56.129 -j DROP
 Essa regra bloqueia todo o tráfego proveniente do atacante.
 
 Fluxo de resposta:
-
+```
 Ataque detectado
 ↓
 Identificação do IP atacante
@@ -238,7 +243,9 @@ Identificação do IP atacante
 Aplicação de regra no firewall
 ↓
 Bloqueio do tráfego malicioso
-📊 Resultados Observados
+```
+
+## 📊 Resultados Observados
 
 Durante o laboratório foi possível observar:
 
@@ -258,7 +265,7 @@ mitigação do ataque utilizando firewall
 
 Esse cenário simula de forma realista o funcionamento de um ambiente de monitoramento de segurança de rede.
 
-📷 Evidências
+## 📷 Evidências
 
 Sugestão de estrutura para screenshots no repositório:
 
@@ -269,7 +276,8 @@ screenshots/
 ├── hydra_bruteforce.png
 ├── syn_flood_attack.png
 ├── suricata_alerts.png
-📚 Conclusão
+
+# 📚 Conclusão
 
 Este laboratório demonstra na prática como diferentes fases de um ataque podem ser detectadas por um sistema de detecção de intrusão em rede.
 
