@@ -244,6 +244,21 @@ Essa regra bloqueia todo o tráfego proveniente do atacante.
 
 <img width="1155" height="82" alt="image" src="https://github.com/user-attachments/assets/f6c8746b-399d-4c4c-a197-b57f1a790e7b" />
 
+Após a aplicação da regra, novas tentativas de ataque foram testadas.
+
+Comando executado no Kali:
+```
+hydra -l root -P rockyou.txt ssh://192.168.56.128
+```
+Resultado observado:
+```
+Timeout connecting to 192.168.56.128
+```
+
+<img width="1264" height="216" alt="image" src="https://github.com/user-attachments/assets/17107f6b-9fa2-4329-9c84-0f18501b7125" />
+
+Isso confirma que o firewall bloqueou com sucesso o tráfego do atacante.
+
 Fluxo de resposta:
 ```
 Ataque detectado
